@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação como UTF-8 para suportar caracteres especiais -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna o site responsivo em dispositivos móveis -->
+  <title>Apresentação - Rodrigo</title> <!-- Título que aparece na aba do navegador -->
+
+  <style>
+    /* Reset básico e configuração de fonte padrão */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* Garante que o padding e border não afetem a largura */
+      font-family: 'Segoe UI', sans-serif; /* Fonte moderna e amigável */
+    }
+
+    /* Estilo geral do corpo da página */
+    body {
+      background: linear-gradient(to right, #4873c4, #4873c4); /* Gradiente azul como fundo */
+      color: #d6e412; 
+      display: flex; /*  flexbox para centralizar o conteúdo */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Altura mínima igual à da tela inteira */
+      padding: 20px;
+      font-size: 15px;
+    }
+    /* cores diferentes de texto  */
+    .strong-a{
+        color: rgb(104, 228, 88);
+        font-size: 18px;
+    }
+    .strong-b{
+        color: red;
+        font-size: 18px;
+    }
+    .strong-c{
+        color: rgb(20, 101, 133);
+        font-size: 18px;
+    }
+
+    /* Caixa principal da apresentação */
+    .apresentacao {
+      background-color: rgba(255, 255, 255, 0.08); /* Fundo com transparência suave */
+      padding: 40px; /* Espaçamento interno */
+      border-radius: 20px; /* Bordas arredondadas */
+      text-align: center; /* Centraliza o texto */
+      max-width: 750px; /* Limita a largura máxima */
+      box-shadow: 0 0 20px rgba(0,0,0,0.3); /* Sombra para destaque */
+    }
+
+    /* Estilização do título principal */
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      color: #00eaff; /* Azul vibrante para destaque */
+    }
+
+    /* Estilização do subtítulo */
+    h2 {
+      font-size: 1.4em;
+      margin-bottom: 25px;
+      font-weight: 400; /* Fonte leve para elegância */
+    }
+
+    /* Estilização dos parágrafos */
+    p {
+      font-size: 1.2em;
+      line-height: 1.7; /* Espaçamento entre linhas */
+      margin-bottom: 20px;
+    }
+
+    /* Responsividade para telas pequenas */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em; /* Reduz tamanho do título principal */
+      }
+
+      p {
+        font-size: 1em; /* Texto mais compacto para celulares */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seção principal da apresentação -->
+  <div class="apresentacao">
+    <h1>Olá, eu sou Rodrigo!</h1> <!-- Título com seu nome -->
+    <h2>Estudante de Análise e Desenvolvimento de Sistemas</h2> <!-- Subtítulo com seu curso atual -->
+
+    <!-- Parágrafos com sua apresentação pessoal -->
+    <p>
+      Atualmente estou cursando <strong class="strong-a">Análise e Desenvolvimento de Sistemas</strong>, e este portfólio é parte de um trabalho acadêmico onde posso mostrar meus avanços e práticas em programação.
+    </p>
+    <p>
+      Um dos focos principais dos meus estudos tem sido <strong class="strong-b">HTML</strong> e <strong class="strong-c">CSS</strong>, tecnologias fundamentais para o desenvolvimento web. Através delas aprendi a estruturar páginas, aplicar estilos visuais, tornar sites responsivos e criar experiências agradáveis para o usuário.
+    </p>
+    <p>
+      Estou desenvolvendo projetos que envolvem criação de layouts modernos, uso de animações com CSS, e técnicas de responsividade para que o conteúdo se adapte bem a diferentes dispositivos. Cada projeto me ajuda a reforçar o conhecimento e explorar novas possibilidades.
+    </p>
+    <p>
+      Estou animado com a jornada que estou trilhando, aprendendo na prática como transformar código em ideias visuais, e construindo a base para atuar na área de desenvolvimento web com criatividade e propósito.
+    </p>
+  </div>
+
+</body>
+</html>

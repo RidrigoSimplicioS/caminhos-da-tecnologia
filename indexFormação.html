@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Rodrigo</title>
+
+  <!-- Importa a fonte Poppins do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset e aplicação da fonte Poppins */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #7772a0, #7772a0);
+      color: #2d2d2d;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      padding: 50px;
+      border-radius: 20px;
+      max-width: 850px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+      margin: 50px auto;
+      animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #6179ff;
+      transition: color 0.3s ease;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    header h1:hover {
+      color: #d84315;
+    }
+
+    header h2 {
+      font-size: 1.4em;
+      font-weight: 400;
+      color: #777;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h3 {
+      font-size: 1.6em;
+      color: #444;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ff6f61;
+      display: inline-block;
+      padding-bottom: 5px;
+      transition: letter-spacing 0.3s ease;
+    }
+
+    section h3:hover {
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #ff6f61;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e74c3c;
+    }
+
+    /* Rodapé com efeito gradiente, texto centralizado e suavidade */
+    footer {
+      margin-top: auto;
+      border-radius: 20px;
+      padding: 20px;
+      background: linear-gradient(to right, #95c413);
+      color: rgb(84, 39, 189);
+      text-align: center;
+      font-size: 0.95em;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+      letter-spacing: 0.5px;
+      animation: fadeInFooter 1.2s ease;
+    }
+
+    @keyframes fadeInFooter {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 30px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      footer {
+        font-size: 0.85em;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <header>
+      <h1>Rodrigo</h1>
+      <h2>Design, Web e Criatividade</h2>
+    </header>
+
+    <section>
+      <h3>Formação Acadêmica</h3>
+      <p>
+        Tenho formação incompleta em <strong>Design de Interiores</strong> (4 semestres concluídos). Atualmente curso <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong>, onde aprofundo minha lógica e habilidades de programação.
+      </p>
+    </section>
+
+    <section>
+      <h3>Atuação Profissional</h3>
+      <p>
+        Trabalho com <strong>projetos de móveis planejados</strong>, integrando criatividade, técnica e funcionalidade em ambientes personalizados.
+      </p>
+    </section>
+
+    <section>
+      <h3>Habilidades na Web</h3>
+      <p>
+        Sou certificado em <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>. Produzo páginas como esta, com foco em responsividade e interatividade.
+      </p>
+    </section>
+
+    <section>
+      <h3>Idiomas</h3>
+      <p>
+        Tenho <strong>conhecimento básico de inglês</strong>, o que me permite acessar conteúdos técnicos e continuar evoluindo.
+      </p>
+    </section>
+
+
+
+  <!-- Rodapé com copy -->
+  <footer>
+    &copy; 2025 Rodrigo S Santos. <br>Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
