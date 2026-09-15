@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades e Jogos — Mundo da Tecnologia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1> Mundo da Tecnologia</h1>
+            <p class="subtitulo">Conhecimento para pais e inspiração para o futuro dos jovens</p>
+
+            <!--  ROBOZINHO ANIMADO -->
+            <div class="robot-container">
+                <div class="robot">
+                    <div class="robot-head">
+                        <div class="robot-eye left"></div>
+                        <div class="robot-eye right"></div>
+                        <div class="robot-mouth"></div>
+                    </div>
+                    <div class="robot-body">
+                        <div class="robot-arm left"></div>
+                        <div class="robot-arm right"></div>
+                    </div>
+                    <div class="robot-legs">
+                        <div class="robot-leg left"></div>
+                        <div class="robot-leg right"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM DO ROBOZINHO -->
+
+        </div>
+    </header>
+
+    <nav class="menu">
+        <div class="container">
+            <ul>
+                <li><a href="index.html"> Início</a></li>
+                <li><a href="o-que-e-ti.html"> O que é TI?</a></li>
+                <li><a href="profissoes.html"> Profissões</a></li>
+                <li><a href="futuro.html"> Futuro</a></li>
+                <li><a href="joguinhos.html" class="ativo"> Atividades</a></li>
+                <li><a href="guia-pais.html"> Guia dos Pais</a></li>
+                <li><a href="contato.html"> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h2> Atividades e Desafios Interativos</h2>
+            <p>Divirta-se com seu filho(a) e aprendam juntos de forma leve e divertida!</p>
+
+            <!-- Jogo 1: Quiz -->
+            <div class="jogo-container">
+                <h3> Quiz: O que você aprendeu?</h3>
+                <div id="quiz">
+                    <div class="pergunta" id="p1">
+                        <p><strong>1. O que significa TI?</strong></p>
+                        <label><input type="radio" name="q1" value="errado"> Tecnologia de Informações</label>
+                        <label><input type="radio" name="q1" value="certo"> Tecnologia da Informação</label>
+                        <label><input type="radio" name="q1" value="errado"> Telefone e Internet</label>
+                    </div>
+
+                    <div class="pergunta" id="p2">
+                        <p><strong>2. Quem cuida da segurança dos dados?</strong></p>
+                        <label><input type="radio" name="q2" value="errado"> Desenvolvedor</label>
+                        <label><input type="radio" name="q2" value="certo"> Especialista em Segurança</label>
+                        <label><input type="radio" name="q2" value="errado"> Designer</label>
+                    </div>
+
+                    <div class="pergunta" id="p3">
+                        <p><strong>3. O que é o "cérebro" do computador?</strong></p>
+                        <label><input type="radio" name="q3" value="errado"> O teclado</label>
+                        <label><input type="radio" name="q3" value="errado"> O hardware</label>
+                        <label><input type="radio" name="q3" value="certo"> O software</label>
+                    </div>
+
+                    <button class="btn" onclick="corrigirQuiz()">✅ Corrigir Respostas</button>
+                    <div id="resultado-quiz" class="resultado"></div>
+                </div>
+            </div>
+
+            <!-- Jogo 2: Desafio das Profissões -->
+            <div class="jogo-container">
+                <h3>🔗 Desafio: Ligar cada profissional ao que ele faz</h3>
+                <p>Arraste ou combine as respostas (pode fazer em papel!):</p>
+
+                <div class="desafio">
+                    <div class="coluna">
+                        <p> Desenvolvedor</p>
+                        <p> Designer</p>
+                        <p> Segurança</p>
+                        <p> Dados</p>
+                    </div>
+                    <div class="coluna">
+                        <p>→ Protege as informações</p>
+                        <p>→ Cria programas e sites</p>
+                        <p>→ Deixa tudo bonito e fácil de usar</p>
+                        <p>→ Descobre padrões nas informações</p>
+                    </div>
+                </div>
+
+                <details>
+                    <summary>✅ Clique aqui para ver a resposta correta</summary>
+                    <div class="resposta-escondida">
+                         Desenvolvedor → Cria programas e sites<br>
+                         Designer → Deixa tudo bonito e fácil de usar<br>
+                         Segurança → Protege as informações<br>
+                         Dados → Descobre padrões nas informações
+                    </div>
+                </details>
+            </div>
+
+            <!-- Jogo 3: Caça-palavras -->
+            <div class="jogo-container">
+                <h3> Caça-Palavras da Tecnologia</h3>
+                <p>Encontre estas palavras: <strong>COMPUTADOR, INTERNET, SOFTWARE, DADOS, REDE</strong></p>
+                <div class="caca-palavras">
+                    C O M P U T A D O R X<br>
+                    I N T E R N E T A B C<br>
+                    S O F T W A R E D E F<br>
+                    R E D E G H I J K L M<br>
+                    D A D O S N O P Q R S
+                </div>
+            </div>
+
+            <!-- Atividade Física -->
+            <div class="jogo-container">
+                <h3> Conversa em Família</h3>
+                <p>Façam juntos essa lista:</p>
+                <ol>
+                    <li>Quais aparelhos com tecnologia temos em casa?</li>
+                    <li>Quem cuida de cada aparelho?</li>
+                    <li>Se você pudesse inventar uma tecnologia nova, o que ela faria?</li>
+                </ol>
+                <p> Escrevam ou desenhem as respostas em uma folha!</p>
+            </div>
+
+            <div class="navegacao">
+                <a href="futuro.html" class="btn">← O Futuro</a>
+                <a href="guia-pais.html" class="btn btn-proximo">Guia dos Pais →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p> Projeto de Ação Social — Conhecimento que transforma o futuro</p>
+            <p>&copy; 2026 Mundo da Tecnologia — Para Pais e Filhos</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

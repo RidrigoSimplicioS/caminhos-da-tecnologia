@@ -1,211 +1,917 @@
+/* ========================================
+   ESTILOS GERAIS — VIBRANTES E ANIMADOS
+   ======================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+:root {
+    --cor-primaria: #6366f1;
+    --cor-secundaria: #ec4899;
+    --cor-terciaria: #10b981;
+    --cor-destaque: #f59e0b;
+    --cor-azul-claro: #3b82f6;
+    --cor-texto: #1f2937;
+    --cor-fundo: #f0f4ff;
+    --sombra-suave: 0 8px 30px rgba(99, 102, 241, 0.15);
+    --sombra-destaque: 0 10px 40px rgba(236, 72, 153, 0.2);
+    --raio-borda: 16px;
+    --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-* { 
-    list-style: none;
-    text-decoration: none;
+* {
     margin: 0;
     padding: 0;
-    background-color: rgb(27, 26, 26);
-
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', 'Poppins', Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--cor-texto);
+    background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 50%, #fef3c7 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    animation: fundoFlutuante 15s ease-in-out infinite alternate;
+}
 
+@keyframes fundoFlutuante {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
 
-header{
-    width: 90%;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   CABEÇALHO — GRADIENTE BRILHANTE
+   ======================================== */
+
+header {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    color: white;
+    padding: 45px 0;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(99, 102, 241, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    animation: brilhoGirando 8s linear infinite;
+}
+
+@keyframes brilhoGirando {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+header .container {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    animation: entradaSuave 1s ease-out;
+}
+
+.subtitulo {
+    font-size: 1.15rem;
+    opacity: 0.95;
+    animation: entradaSuave 1s ease-out 0.2s both;
+}
+
+@keyframes entradaSuave {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================
+   MENU DE NAVEGAÇÃO — ITENS SEPARADOS COM ÍCONES
+   ======================================== */
+
+.menu {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 12px 0;
+}
+
+.menu ul {
+    list-style: none;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* 🔹 ESPAÇAMENTO ENTRE ITENS */
+    padding: 0 15px;
+}
+
+.menu li {
+    /* 🔹 CADA ITEM É UMA CAIXA INDEPENDENTE */
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05));
+    border-radius: 50px; /* 🔹 BORDAS ARREDONDADAS */
+    border: 2px solid transparent;
+   /*border-image: linear-gradient(135deg, #3b82f6, #10b981) 1;*/
+    transition: var(--transicao);
+}
+
+.menu li:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+    background: linear-gradient(135deg, #8ce9ca);
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* 🔹 ESPAÇO ENTRE ÍCONE E TEXTO */
+    padding: 12px 18px;
     text-decoration: none;
-    align-items: center;
-    height: 60px;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transicao);
+    position: relative;
+    white-space: nowrap;
 }
 
-nav{
-    width: 60%;
-    
+/* 🔹 ÍCONE COM DESTAQUE PRÓPRIO */
+
+.menu a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* 🔹 PÁGINA ATIVA — DESTAQUE TOTAL */
+.menu li.ativo-item {
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+}
+
+.menu li.ativo-item a {
+    color: white;
 }
 
 
-ul {
+/* ========================================
+   CONTEÚDO PRINCIPAL
+   ======================================== */
+
+main {
+    padding: 40px 0 70px;
+}
+
+section h2 {
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria)) 1;
+    display: inline-block;
+}
+
+section h3 {
+    color: var(--cor-secundaria);
+    font-size: 1.4rem;
+    margin: 32px 0 16px;
+}
+
+section h4 {
+    color: var(--cor-terciaria);
+    font-size: 1.15rem;
+    margin: 18px 0 10px;
+}
+
+section p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+section a {
+    color: var(--cor-primaria);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: var(--transicao);
+}
+
+section a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-secundaria);
+    transition: width 0.3s ease;
+}
+
+section a:hover {
+    color: var(--cor-secundaria);
+}
+
+section a:hover::after {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
 }
 
-li {
-    color: aliceblue;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    font-family: 'Kdam Thmor Pro';
-    font-size: 15px;
-    
+/* ========================================
+   CAIXAS E DESTAQUES — COM BRILHO
+   ======================================== */
+
+.caixa-destaque {
+    background: white;
+    border-left: 5px solid var(--cor-secundaria);
+    padding: 24px 26px;
+    margin: 30px 0;
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-suave);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transicao);
 }
 
-li:hover{
-    transition: .4s;
-    color: rgb(206, 14, 14);
-    /* background-color: chocolate; */
-    font-size: 20px; 
-    display: flex;
-    align-items: center;
-
+.caixa-destaque:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-destaque);
 }
 
-
-#logo{
-    width: 150px;
-    height: 60px;
+.caixa-destaque::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.08), transparent);
+    border-radius: 0 0 0 100%;
 }
 
-#banner{
-    background-image: url('https://live.staticflickr.com/65535/51894784334_79340c9e36_b.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 600px;
+.dica-pais {
+    border-left-color: var(--cor-destaque);
+    background: linear-gradient(120deg, #fffbeb, #fff);
 }
 
-#trailer-container{
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-}
-.content{
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+.dica-pais:hover {
+    box-shadow: 0 10px 40px rgba(245, 158, 11, 0.15);
 }
 
-.trailer{
-    width: 50%;
+.chamada {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(236, 72, 153, 0.08));
+    padding: 28px;
+    border-radius: var(--raio-borda);
+    margin-top: 35px;
+    border: 2px solid rgba(99, 102, 241, 0.15);
+    transition: var(--transicao);
 }
 
-#sinopse{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 30px;
-
-}
-.description{
-    color: #fff;
-    font-size: 17px;
-    font-family: 'Kdam Thmor Pro';
-    /* width: 70px; */
-    align-items: center;
+.chamada:hover {
+    border-color: var(--cor-primaria);
+    box-shadow: var(--sombra-suave);
 }
 
-.button{
-    width: 200px;
-    height: 60px;
-    background-color: red;
-    color: #fff;
-    padding: 8px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: .8s;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    border: none;
-    outline: none;
-    margin-top: 25px;
-}
+/* ========================================
+   CARDS — FLUTUAM AO PASSAR O MOUSE
+   ======================================== */
 
-.button:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-.actor-cards-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-
-}
-
-.cards-content{
-    width: 90%;
+.destaques {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    column-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 35px 0;
 }
 
-.card  {
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
     width: 100%;
-    height: 600px;
-    background-size: cover;
-    background-position: 50% 50%;
-    border-radius: 5px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--cor-primaria);
+    font-size: 1.25rem;
+}
+
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.cartao {
+    background: white;
+    padding: 26px;
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-suave);
+    border-top: 4px solid var(--cor-terciaria);
+    transition: var(--transicao);
+    position: relative;
+}
+
+.cartao:nth-child(even) {
+    border-top-color: var(--cor-secundaria);
+}
+
+.cartao:hover {
+    transform: translateY(-8px) rotate(0.5deg);
+    box-shadow: 0 18px 45px rgba(16, 185, 129, 0.18);
+}
+
+.cartao:nth-child(even):hover {
+    box-shadow: 0 18px 45px rgba(236, 72, 153, 0.18);
+}
+
+.cartao h4 {
+    margin-top: 0;
+    font-size: 1.15rem;
+}
+
+/* ========================================
+   LISTAS
+   ======================================== */
+
+.lista-simples,
+.lista-numerada {
+    margin: 24px 0 24px 35px;
+}
+
+.lista-simples li,
+.lista-numerada li {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    padding-left: 8px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.lista-simples li:hover,
+.lista-numerada li:hover {
+    transform: translateX(8px);
+    color: var(--cor-primaria);
+}
+
+/* ========================================
+   BOTÕES — COM MOVIMENTO E BRILHO ✨
+   ======================================== */
+
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 2px dashed rgba(99, 102, 241, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--cor-primaria), #4f46e5);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
     cursor: pointer;
-    transition: 0.1s;
+    transition: var(--transicao);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--cor-secundaria), #db2777);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(236, 72, 153, 0.35);
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-proximo {
+    background: linear-gradient(135deg, var(--cor-terciaria), #059669);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+}
+
+.btn-proximo:hover {
+    box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
+}
+
+/* ========================================
+   JOGOS E ATIVIDADES
+   ======================================== */
+
+.jogo-container {
+    background: white;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-suave);
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria), var(--cor-terciaria)) 1;
+    transition: var(--transicao);
+}
+
+.jogo-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 50px rgba(99, 102, 241, 0.18);
+}
+
+.pergunta {
+    margin: 22px 0;
+    padding: 18px;
+    background: linear-gradient(120deg, #eef2ff, #fdf2f8);
+    border-radius: 12px;
+    transition: var(--transicao);
+}
+
+.pergunta:hover {
+    background: linear-gradient(120deg, #e0e7ff, #fce7f3);
+}
+
+.pergunta label {
+    display: block;
+    margin: 10px 0 10px 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.pergunta label:hover {
+    transform: translateX(6px);
+    color: var(--cor-primaria);
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    animation: aparecer 0.5s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.desafio {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 0 20px 10px;
-    color: #fff;
-    font-size: 19px;
-    font-family: 'Kdam Thmor Pro';
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: 20px 0;
 }
 
-
-
-
-.copy{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    
+.coluna p {
+    margin: 10px 0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
 }
 
-.banner-1{
-    background-image: url(./imgBatman/banner-1.jpg);
-}
-.banner-2{
-    background-image:url(./imgBatman/banner-2.jpg) ;
-}
-.banner-3{
-    background-image: url(./imgBatman/banner-3.jpg);
+.coluna p:hover {
+    background: #f0f4ff;
 }
 
-.banner-4{
-    background-image: url(./imgBatman/batman_01.jpg);
+details {
+    margin-top: 18px;
+    padding: 14px;
+    background: linear-gradient(120deg, #eef2ff, #fef3c7);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transicao);
 }
 
-
-
-
-
-
-footer{
-    height: 300px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+details:hover {
+    background: linear-gradient(120deg, #e0e7ff, #fde68a);
 }
 
-span{
-    color: #fff;
-    font-family: 'Kdam Thmor Pro';
+.resposta-escondida {
+    margin-top: 12px;
+    padding: 14px;
+    background: white;
+    border-radius: 8px;
+    color: #065f46;
+    border-left: 4px solid var(--cor-terciaria);
 }
 
-.footer-navigation{
+.caca-palavras {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    line-height: 2;
+    background: linear-gradient(135deg, #f0f9ff, #fdf4ff);
+    padding: 25px;
+    border-radius: var(--raio-borda);
+    margin-top: 15px;
+    border: 2px dashed var(--cor-primaria);
+}
+
+/* ========================================
+   TABELAS E FORMULÁRIO
+   ======================================== */
+
+.tabela-dicas {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0;
+    background: white;
+    border-radius: var(--raio-borda);
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+}
+
+.tabela-dicas th,
+.tabela-dicas td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6;
+    transition: background 0.2s ease;
+}
+
+.tabela-dicas tr:hover td {
+    background: #f9fafb;
+}
+
+.tabela-dicas th {
+    background: linear-gradient(135deg, var(--cor-primaria), #4f46e5);
+    color: white;
+    font-weight: 600;
+}
+
+.formulario label {
+    display: block;
+    margin: 22px 0 8px;
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.formulario textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.resposta-enviada {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 12px;
     display: none;
+    animation: aparecer 0.5s ease-out;
 }
 
-.footer-list{
+/* ========================================
+   RODAPÉ — GRADIENTE
+   ======================================== */
+
+footer {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer p {
+    margin-bottom: 6px;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   RESPONSIVIDADE — PERFEITA EM CELULAR
+   ======================================== */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    .menu ul {
+        justify-content: flex-start;
+    }
+
+    .menu a {
+        padding: 11px 10px;
+        font-size: 0.9rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .grade-cartoes,
+    .destaques {
+        grid-template-columns: 1fr;
+    }
+
+    .navegacao {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .desafio {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 30px 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .caixa-destaque,
+    .jogo-container {
+        padding: 18px;
+    }
+}
+
+/* ========================================
+   🤖 ROBOZINHO ANIMADO QUE ANDA
+   ======================================== */
+
+.robot-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 130px;
+    margin: 20px auto 0;
+    overflow: hidden;
+}
+
+.robot {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 60px;
+    height: 90px;
+    animation: robotWalk 15s linear infinite;
+}
+
+/* Movimento do robô indo e voltando */
+@keyframes robotWalk {
+    0% {
+        left: 0%;
+        transform: translateX(0) scaleX(1);
+    }
+    45% {
+        left: 100%;
+        transform: translateX(-100%) scaleX(1);
+    }
+    50% {
+        left: 100%;
+        transform: translateX(-100%) scaleX(-1);
+    }
+    95% {
+        left: 0%;
+        transform: translateX(0) scaleX(-1);
+    }
+    100% {
+        left: 0%;
+        transform: translateX(0) scaleX(1);
+    }
+}
+
+/* Cabeça do robô */
+.robot-head {
+    width: 50px;
+    height: 45px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border-radius: 12px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: inset -4px -4px 0 rgba(0,0,0,0.15);
+}
+
+/* Olhos */
+.robot-eye {
+    position: absolute;
+    top: 12px;
+    width: 10px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    animation: blink 4s infinite;
+}
+
+.robot-eye.left {
+    left: 10px;
+}
+
+.robot-eye.right {
+    right: 10px;
+}
+
+/* Piscada dos olhos */
+@keyframes blink {
+    0%, 90%, 100% {
+        height: 14px;
+    }
+    95% {
+        height: 2px;
+    }
+}
+
+/* Boca */
+.robot-mouth {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 8px;
+    background: #333;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Corpo */
+.robot-body {
+    width: 44px;
+    height: 35px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border-radius: 10px;
+    margin: 8px auto 0;
+    position: relative;
+    box-shadow: inset -4px -4px 0 rgba(0,0,0,0.15);
+}
+
+/* Braços */
+.robot-arm {
+    position: absolute;
+    top: 5px;
+    width: 8px;
+    height: 22px;
+    background: #98eb12;
+    border-radius: 4px;
+    animation: swingArms 0.4s ease-in-out infinite alternate;
+}
+
+.robot-arm.left {
+    left: -12px;
+}
+
+.robot-arm.right {
+    right: -12px;
+}
+
+/* Balanço dos braços */
+@keyframes swingArms {
+    0% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+/* Pernas */
+.robot-legs {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.robot-leg {
+    width: 10px;
+    height: 18px;
+    background: #6366f1;
+    border-radius: 4px;
+    animation: walkLegs 0.4s ease-in-out infinite alternate;
+}
+
+.robot-leg.left {
+    animation-delay: 0.2s;
+}
+
+/* Movimento das pernas */
+@keyframes walkLegs {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 📱 Ajuste em telas menores */
+@media (max-width: 768px) {
+    .robot-container {
+        max-width: 90%;
+        height: 110px;
+    }
+
+    .robot {
+        width: 50px;
+        height: 75px;
+    }
+
+    .robot-head {
+        width: 42px;
+        height: 38px;
+    }
+
+    .robot-body {
+        width: 36px;
+        height: 30px;
+    }
+
+    .robot-arm {
+        width: 7px;
+        height: 18px;
+    }
+
+    .robot-leg {
+        width: 8px;
+        height: 15px;
+    }
 }

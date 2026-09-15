@@ -3,113 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portifólio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/37277eaa06.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styleA.css" />
-    
+    <title>Mundo da Tecnologia — Para Pais e Filhos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-        
-    <header class="title">
-        <h1>Web Site <span class="name">@</span>  </h1>
-        <p> Desenvolvimento </p> 
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1> Mundo da Tecnologia</h1>
+            <p class="subtitulo">Conhecimento para pais e inspiração para o futuro dos jovens</p>
+
+            <!--  ROBOZINHO ANIMADO -->
+            <div class="robot-container">
+                <div class="robot">
+                    <div class="robot-head">
+                        <div class="robot-eye left"></div>
+                        <div class="robot-eye right"></div>
+                        <div class="robot-mouth"></div>
+                    </div>
+                    <div class="robot-body">
+                        <div class="robot-arm left"></div>
+                        <div class="robot-arm right"></div>
+                    </div>
+                    <div class="robot-legs">
+                        <div class="robot-leg left"></div>
+                        <div class="robot-leg right"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM DO ROBOZINHO -->
+
+        </div>
     </header>
 
+    <!-- Menu de Navegação -->
+    <nav class="menu">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="ativo"> Início</a></li>
+                <li><a href="o-que-e-ti.html"> O que é TI?</a></li>
+                <li><a href="profissoes.html"> Profissões</a></li>
+                <li><a href="futuro.html"> Futuro</a></li>
+                <li><a href="joguinhos.html"> Atividades</a></li>
+                <li><a href="guia-pais.html"> Guia dos Pais</a></li>
+                <li><a href="contato.html"> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div>
-        <h2 class="welcome"> Bem-vindos à minha página.</h2>
-
-    </div>
-    
-    <section class="top">
-        <p> O Mundo Web e Suas Linguagens, a web se tornou um dos 
-            pilares da comunicação moderna, possibilitando a criação
-             de sites, aplicações, redes sociais e lojas virtuais que 
-             conectam pessoas e negócios em escala global. Por trás dessa 
-             interface digital acessível a todos, existe um conjunto 
-             poderoso de linguagens que tornam possível a construção e 
-             funcionamento da web, entre elas
-
-            <span class="iten-01">HTML,</span>
-            <span class="iten-02"> CSS,</span>  
-            <span class="iten-03"> Javascript</span>.   
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <section class="apresentacao">
+            <h2>Bem-vindo ao Mundo da Tecnologia! 🚀</h2>
+            <p>Este espaço foi criado para <strong>ajudar os pais a entenderem</strong> o universo da Tecnologia da Informação (TI), conhecerem as profissões do futuro e saberem como <strong>incentivar e guiar seus filhos</strong> nesse caminho promissor.</p>
             
-        </p>
-    </section>
-                
-    <!-- <div>
-       <h2 class="pratica"> Praticas</h2> 
-    </div> -->
-
-    
-    <article>
-
-        <a href="indexApresentação.html">
-            <div class="card">Sobre mim</div>
-        </a>
-
-        <a href="./indexB.html">
-            <div class="card">Projeto</div>
-        </a>
-
-        <a href="indexFormação.html">
-            <div class="card">Formação</div>   
-        </a>
-        
-        
-        <a href="indexcontato.html">
-            <div class="card">contato</div>    
-        </a>
-
-        
-    </article>
-
-    
-    <section >
-
-        <div class="contatos"> 
-            <h3> Mundo Web</h3>
-        </div>
-        
-        
-        <div>
-            <p class="redes">Me acompanhe nas redes:</p>
-        </div>
-
-        <div class="icon">
-                
-                <div class="icon-button icon-button--github">
-                    <a href="https://github.com/RidrigoSimplicioS" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <div class="destaques">
+                <div class="card">
+                    <h3> Entenda de forma simples</h3>
+                    <p>Explicações claras, sem termos complicados.</p>
                 </div>
-
-                <div class="icon-button icon-button--instagram">
-                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <div class="card">
+                    <h3> Aprenda brincando</h3>
+                    <p>Atividades e jogos para crianças e adolescentes.</p>
                 </div>
-
-                <div class="icon-button icon-button--linkedin">
-                    <a href="https://www.linkedin.com/in/rodrigo-simplicio-s-215436324/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <div class="card">
+                    <h3> Conheça as carreiras</h3>
+                    <p>Descubra o que fazem os profissionais de TI.</p>
                 </div>
+            </div>
 
-    
-        </div>
-    </section>
-   
+            <div class="chamada">
+                <h3> Comece por aqui:</h3>
+                <p>Recomendamos ler na ordem: comece entendendo <a href="o-que-e-ti.html">o que é Tecnologia</a>, depois conheça <a href="profissoes.html">as profissões</a> e divirta-se nas <a href="joguinhos.html">atividades</a> com seus filhos!</p>
+            </div>
+        </section>
+    </main>
 
+    <!-- Rodapé -->
     <footer>
-    <p>
-        Desenvolvido por: <span class="r">Rodrigo S Santos</span> <br>
-        Esta página foi desenvolvida para fins de treino e estudo. <br>
-        &copy; Todos os direitos reservados <br>
-        <span>rodrigosstigre@gmail.com</span>
-    </p>
-</footer>
-  
+        <div class="container">
+            <p> Projeto de Ação Social — Conhecimento que transforma o futuro</p>
+            <p>&copy; 2026 Mundo da Tecnologia — Para Pais e Filhos</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

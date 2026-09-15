@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato — Mundo da Tecnologia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1> Mundo da Tecnologia</h1>
+            <p class="subtitulo">Conhecimento para pais e inspiração para o futuro dos jovens</p>
+
+            <!--  ROBOZINHO ANIMADO -->
+            <div class="robot-container">
+                <div class="robot">
+                    <div class="robot-head">
+                        <div class="robot-eye left"></div>
+                        <div class="robot-eye right"></div>
+                        <div class="robot-mouth"></div>
+                    </div>
+                    <div class="robot-body">
+                        <div class="robot-arm left"></div>
+                        <div class="robot-arm right"></div>
+                    </div>
+                    <div class="robot-legs">
+                        <div class="robot-leg left"></div>
+                        <div class="robot-leg right"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM DO ROBOZINHO -->
+
+        </div>
+    </header>
+
+    <nav class="menu">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">🏠 Início</a></li>
+                <li><a href="o-que-e-ti.html">💻 O que é TI?</a></li>
+                <li><a href="profissoes.html">💼 Profissões</a></li>
+                <li><a href="futuro.html">🚀 Futuro</a></li>
+                <li><a href="joguinhos.html">🎮 Atividades</a></li>
+                <li><a href="guia-pais.html">📖 Guia dos Pais</a></li>
+                <li><a href="contato.html" class="ativo">✉️ Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h2> Fale Conosco</h2>
+            <p>Tem dúvidas, sugestões ou quer saber mais? Entre em contato!</p>
+
+            <div class="formulario">
+                <form id="formContato">
+                    <label for="nome">Seu nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+                    <label for="email">Seu e-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+
+                    <label for="mensagem">Sua mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Escreva aqui sua dúvida ou sugestão..."></textarea>
+
+                    <button type="submit" class="btn">📤 Enviar Mensagem</button>
+                </form>
+                <div id="resposta" class="resposta-enviada"></div>
+            </div>
+
+            <div class="caixa-destaque">
+                <h3> Agradecimento</h3>
+                <p>Agradecemos seu interesse! Este site é um projeto de ação social sem fins lucrativos, criado com o objetivo de levar conhecimento e esperança às famílias. Compartilhe com quem possa interessar! 🌍✨</p>
+            </div>
+
+            <div class="navegacao">
+                <a href="guia-pais.html" class="btn">← Voltar ao Guia dos Pais</a>
+                <a href="index.html" class="btn btn-proximo">🏠 Voltar ao Início</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p> Projeto de Ação Social — Conhecimento que transforma o futuro</p>
+            <p>&copy; 2026 Mundo da Tecnologia — Para Pais e Filhos</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
