@@ -1,6 +1,4 @@
-/* ========================================
-   ESTILOS GERAIS — VIBRANTES E ANIMADOS
-   ======================================== */
+/* ESTILOS GERAIS — VIBRANTES E ANIMADOS*/
 
 :root {
     --cor-primaria: #6366f1;
@@ -43,9 +41,7 @@ body {
     padding: 0 20px;
 }
 
-/* ========================================
-   CABEÇALHO — GRADIENTE BRILHANTE
-   ======================================== */
+
 
 header {
     background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
@@ -96,9 +92,7 @@ header h1 {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ========================================
-   MENU DE NAVEGAÇÃO — ITENS SEPARADOS COM ÍCONES
-   ======================================== */
+/*MENU DE NAVEGAÇÃO  */
 
 .menu {
     background: rgba(255, 255, 255, 0.95);
@@ -148,13 +142,15 @@ header h1 {
     white-space: nowrap;
 }
 
-/* 🔹 ÍCONE COM DESTAQUE PRÓPRIO */
+/*  ÍCONE COM DESTAQUE PRÓPRIO */
 
 .menu a:hover {
     color: var(--cor-secundaria);
 }
 
-/* 🔹 PÁGINA ATIVA — DESTAQUE TOTAL */
+/*  PÁGINA ATIVA */
+
+
 .menu li.ativo-item {
     background: linear-gradient(135deg, #6366f1, #ec4899);
     box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
@@ -165,9 +161,7 @@ header h1 {
 }
 
 
-/* ========================================
-   CONTEÚDO PRINCIPAL
-   ======================================== */
+/* CONTEÚDO PRINCIPAL */
 
 main {
     padding: 40px 0 70px;
@@ -228,9 +222,7 @@ section a:hover::after {
     width: 100%;
 }
 
-/* ========================================
-   CAIXAS E DESTAQUES — COM BRILHO
-   ======================================== */
+/* CAIXAS E DESTAQUES — COM BRILHO*/
 
 .caixa-destaque {
     background: white;
@@ -283,9 +275,7 @@ section a:hover::after {
     box-shadow: var(--sombra-suave);
 }
 
-/* ========================================
-   CARDS — FLUTUAM AO PASSAR O MOUSE
-   ======================================== */
+/*CARDS — FLUTUAM AO PASSAR O MOUSE*/
 
 .destaques {
     display: grid;
@@ -365,9 +355,7 @@ section a:hover::after {
     font-size: 1.15rem;
 }
 
-/* ========================================
-   LISTAS
-   ======================================== */
+/* LISTAS */
 
 .lista-simples,
 .lista-numerada {
@@ -389,9 +377,7 @@ section a:hover::after {
     color: var(--cor-primaria);
 }
 
-/* ========================================
-   BOTÕES — COM MOVIMENTO E BRILHO ✨
-   ======================================== */
+/* BOTÕES*/
 
 .navegacao {
     display: flex;
@@ -456,9 +442,7 @@ section a:hover::after {
     box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
 }
 
-/* ========================================
-   JOGOS E ATIVIDADES
-   ======================================== */
+/* JOGOS E ATIVIDADES*/
 
 .jogo-container {
     background: white;
@@ -565,9 +549,7 @@ details:hover {
     border: 2px dashed var(--cor-primaria);
 }
 
-/* ========================================
-   TABELAS E FORMULÁRIO
-   ======================================== */
+/* TABELAS E FORMULÁRIO */
 
 .tabela-dicas {
     width: 100%;
@@ -637,9 +619,7 @@ details:hover {
     animation: aparecer 0.5s ease-out;
 }
 
-/* ========================================
-   RODAPÉ — GRADIENTE
-   ======================================== */
+/* RODAPÉ — GRADIENTE */
 
 footer {
     background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
@@ -658,9 +638,7 @@ footer p {
     z-index: 1;
 }
 
-/* ========================================
-   RESPONSIVIDADE — PERFEITA EM CELULAR
-   ======================================== */
+/* RESPONSIVIDADE */
 
 @media (max-width: 768px) {
     header h1 {
@@ -715,9 +693,7 @@ footer p {
     }
 }
 
-/* ========================================
-   🤖 ROBOZINHO ANIMADO QUE ANDA
-   ======================================== */
+/* ROBOZINHO ANIMADO */
 
 .robot-container {
     position: relative;
@@ -844,6 +820,7 @@ footer p {
 }
 
 /* Balanço dos braços */
+
 @keyframes swingArms {
     0% {
         transform: rotate(-15deg);

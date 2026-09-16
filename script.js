@@ -1,12 +1,12 @@
-// ========================================
-// SCRIPT PRINCIPAL DO SITE — COMPLETO ✅
-// ========================================
+// 
+// SCRIPT PRINCIPAL DO SITE — COMPLETO 
+// 
 
-console.log("🌐 Mundo da Tecnologia — Site carregado com sucesso!");
+console.log(" Mundo da Tecnologia — Site carregado com sucesso!");
 
-// ========================================
+// 
 // FUNÇÃO: CORRIGIR QUIZ
-// ========================================
+// 
 function corrigirQuiz() {
     let acertos = 0;
     let total = 3;
@@ -35,25 +35,25 @@ function corrigirQuiz() {
         divResultado.style.color = "#155724";
         divResultado.style.padding = "15px";
         divResultado.style.borderRadius = "8px";
-        divResultado.innerHTML = `🎉 Parabéns! Você acertou TODAS as ${total} perguntas! Continue assim!`;
+        divResultado.innerHTML = ` Parabéns! Você acertou TODAS as ${total} perguntas! Continue assim!`;
     } else if (acertos >= 1) {
         divResultado.style.background = "#fff3cd";
         divResultado.style.color = "#856404";
         divResultado.style.padding = "15px";
         divResultado.style.borderRadius = "8px";
-        divResultado.innerHTML = `⚠️ Você acertou ${acertos} de ${total}. Reveja as respostas e tente novamente!`;
+        divResultado.innerHTML = ` Você acertou ${acertos} de ${total}. Reveja as respostas e tente novamente!`;
     } else {
         divResultado.style.background = "#f8d7da";
         divResultado.style.color = "#721c24";
         divResultado.style.padding = "15px";
         divResultado.style.borderRadius = "8px";
-        divResultado.innerHTML = `❌ Você ainda não acertou nenhuma. Leia o conteúdo com atenção e tente de novo! 💪`;
+        divResultado.innerHTML = ` Você ainda não acertou nenhuma. Leia o conteúdo com atenção e tente de novo! 💪`;
     }
 }
 
-// ========================================
+// 
 // FUNÇÃO: FORMULÁRIO DE CONTATO
-// ========================================
+//
 window.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("formContato");
     if (form) {
@@ -74,9 +74,9 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// ========================================
-// DESTAQUE: ANIMAÇÃO AO ROLAR A PÁGINA
-// ========================================
+// 
+//  ANIMAÇÃO AO ROLAR A PÁGINA
+// 
 document.addEventListener("DOMContentLoaded", function() {
     const cartoes = document.querySelectorAll(".cartao, .card");
     
@@ -97,9 +97,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// ========================================
+//
 // MENSAGEM DE AJUDA NO CONSOLE
-// ========================================
-console.log("%c🌐 Mundo da Tecnologia", "font-size: 16px; font-weight: bold; color: #2c5aa0;");
-console.log("%cSite criado com carinho para Pais e Filhos 💛", "color: #4a90d9;");
+// 
+console.log("%c Mundo da Tecnologia", "font-size: 16px; font-weight: bold; color: #2c5aa0;");
+console.log("%cSite criado com carinho para Pais e Filhos ", "color: #4a90d9;");
 console.log("%cSe precisar de ajuda, consulte a página de Contato!", "color: #666;");
