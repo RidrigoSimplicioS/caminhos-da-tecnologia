@@ -1,4 +1,4 @@
-#  Mundo da Tecnologia — Site de Ação Social
+#  Caminhos da tecnologia — Site de Ação Social
 
 >  Conhecimento para pais e inspiração para o futuro dos jovens
 
