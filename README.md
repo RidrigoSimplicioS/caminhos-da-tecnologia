@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Sobre o Projeto
+##  Sobre o Projeto
 
 Este é um site educativo e de ação social, criado para ajudar os pais a entenderem o mundo da Tecnologia e da Programação, para que possam orientar e inspirar seus filhos e adolescentes a descobrirem o fascinante universo da TI.
 
@@ -14,26 +14,26 @@ Este é um site educativo e de ação social, criado para ajudar os pais a enten
 
 ##  Objetivos
 
-- ✅ Apresentar de forma simples e acessível o que é Tecnologia e TI
-- ✅ Mostrar as principais profissões e caminhos da área
-- ✅ Explicar as linguagens de programação de forma didática
-- ✅ Indicar plataformas e jogos gratuitos para aprender a programar
-- ✅ Oferecer guias e orientações para os pais
-- ✅ Incentivar curiosidade, criatividade e amor pelo aprendizado
+-  Apresentar de forma simples e acessível o que é Tecnologia e TI
+-  Mostrar as principais profissões e caminhos da área
+-  Explicar as linguagens de programação de forma didática
+-  Indicar plataformas e jogos gratuitos para aprender a programar
+-  Oferecer guias e orientações para os pais
+-  Incentivar curiosidade, criatividade e amor pelo aprendizado
 
 ---
 
-## 📄 Estrutura do Site
+##  Estrutura do Site
 
 | Página | Conteúdo |
 |---|---|
-| 🏠 index.html | Página inicial — apresentação e mensagem principal |
-| 💻 o-que-e-ti.html | O que é Tecnologia da Informação e como funciona |
-| 💼 profissoes.html | Principais profissões e áreas de atuação |
-| 🚀 futuro.html | Tendências e o que vem pela frente |
-| 🎮 joguinhos.html | Atividades e exercícios de lógica |
-| 📖 guia-pais.html | Orientações e dicas para os pais |
-| 📚 aprenda-programacao.html | Linguagens, plataformas e sites recomendados |
+|  index.html | Página inicial — apresentação e mensagem principal |
+|  o-que-e-ti.html | O que é Tecnologia da Informação e como funciona |
+|  profissoes.html | Principais profissões e áreas de atuação |
+|  futuro.html | Tendências e o que vem pela frente |
+|  joguinhos.html | Atividades e exercícios de lógica |
+|  guia-pais.html | Orientações e dicas para os pais |
+|  aprenda-programacao.html | Linguagens, plataformas e sites recomendados |
 
 ---
 
@@ -48,12 +48,12 @@ Este é um site educativo e de ação social, criado para ajudar os pais a enten
 
 ##  Características
 
-- ✅ Totalmente responsivo — funciona em celular, tablet e computador
-- ✅ Visual moderno e atrativo — cores vibrantes e animações suaves
-- ✅ Conteúdo em português — acessível a todos
-- ✅ Links verificados e funcionando — plataformas gratuitas e seguras
-- ✅ Código aberto e livre — pode ser adaptado e compartilhado
-- ✅ Sem propagandas e sem custos — 100% gratuito
+-  Totalmente responsivo — funciona em celular, tablet e computador
+-  Visual moderno e atrativo — cores vibrantes e animações suaves
+-  Conteúdo em português — acessível a todos
+-  Links verificados e funcionando — plataformas gratuitas e seguras
+-  Código aberto e livre — pode ser adaptado e compartilhado
+-  Sem propagandas e sem custos — 100% gratuito
 
 ---
 
@@ -63,13 +63,13 @@ Todos os sites indicados na página Aprenda Programação são gratuitos e segur
 
 | Plataforma | Indicação |
 |---|---|
-| 🎨 Scratch | A partir de 6 anos |
-| 🧩 Code.org | 4 a 18 anos |
-| 📚 Khan Academy | Todas as idades |
-| 🧠 Ozária | 8 a 15 anos |
-| 🔤 Hora do Código | Todas as idades |
-| 💻 ProgramadorBR | A partir de 12 anos |
-| 🌐 freeCodeCamp | A partir de 14 anos |
+|  Scratch | A partir de 6 anos |
+|  Code.org | 4 a 18 anos |
+|  Khan Academy | Todas as idades |
+|  Ozária | 8 a 15 anos |
+|  Hora do Código | Todas as idades |
+|  ProgramadorBR | A partir de 12 anos |
+|  freeCodeCamp | A partir de 14 anos |
 
 ---
 
@@ -82,9 +82,9 @@ Todos os sites indicados na página Aprenda Programação são gratuitos e segur
 ##  Contribuindo
 
 Este é um projeto de ação social! Sinta-se à vontade para:
-- ✅ Usar e compartilhar o conteúdo
-- ✅ Adaptar e melhorar
-- ✅ Compartilhar com outros pais, escolas e comunidade
+-  Usar e compartilhar o conteúdo
+-  Adaptar e melhorar
+-  Compartilhar com outros pais, escolas e comunidade
 
 ---
 
